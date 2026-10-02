@@ -448,4 +448,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 11. FAQ ACCORDION ---
+  const faqTriggers = document.querySelectorAll('.faq-trigger');
+  faqTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const parent = trigger.closest('.faq-item');
+      if (!parent) return;
+
+      const isOpen = parent.classList.contains('active');
+
+      // Cerrar otros para mantener limpieza visual
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+        const btn = item.querySelector('.faq-trigger');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        parent.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
 });
+
