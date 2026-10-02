@@ -170,9 +170,40 @@
 
   <!-- HERO SECTION: EMOCIÓN, POESÍA VISUAL Y CONEXIÓN HUMANA -->
   <section class="hero-section">
-    <div class="hero-background">
-      <img src="assets/images/yarinacocha.jpg" alt="Atardecer dorado en la Laguna de Yarinacocha Pucallpa" class="hero-bg-img" fetchpriority="high">
+    <!-- HERO SLIDER DINÁMICO (5 DESTINOS) -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" data-location="Laguna de Yarinacocha, Pucallpa">
+        <img src="assets/images/yarinacocha.jpg" alt="Atardecer en Laguna de Yarinacocha Pucallpa" class="hero-bg-img" fetchpriority="high">
+      </div>
+      <div class="hero-slide" data-location="Catarata Velo de la Novia, Aguaytía">
+        <img src="assets/images/velo_novia.jpg" alt="Catarata Velo de la Novia en Padre Abad Aguaytía" class="hero-bg-img" loading="lazy">
+      </div>
+      <div class="hero-slide" data-location="Comunidad Shipibo-Konibo, San Francisco">
+        <img src="assets/images/shipibo_kene.jpg" alt="Maestra artesana Shipibo bordando arte Kené" class="hero-bg-img" loading="lazy">
+      </div>
+      <div class="hero-slide" data-location="Machu Picchu, Cusco Imperial">
+        <img src="assets/images/cusco_machu_picchu.jpg" alt="Amanecer en la ciudadela de Machu Picchu" class="hero-bg-img" loading="lazy">
+      </div>
+      <div class="hero-slide" data-location="Cancún & Riviera Maya, Caribe">
+        <img src="assets/images/caribe_cancun.jpg" alt="Playa paradisíaca en Cancún Caribe" class="hero-bg-img" loading="lazy">
+      </div>
       <div class="hero-overlay"></div>
+
+      <!-- Controles del Slider Hero -->
+      <div class="hero-slider-controls">
+        <span class="hero-slide-location" id="heroSlideLocation">📍 Laguna de Yarinacocha, Pucallpa</span>
+        <div class="hero-slider-nav">
+          <button type="button" class="btn-slider-arrow" id="heroPrevBtn" aria-label="Foto anterior">‹</button>
+          <div class="hero-dots" id="heroDots">
+            <span class="hero-dot active" data-index="0"></span>
+            <span class="hero-dot" data-index="1"></span>
+            <span class="hero-dot" data-index="2"></span>
+            <span class="hero-dot" data-index="3"></span>
+            <span class="hero-dot" data-index="4"></span>
+          </div>
+          <button type="button" class="btn-slider-arrow" id="heroNextBtn" aria-label="Siguiente foto">›</button>
+        </div>
+      </div>
     </div>
 
     <div class="container hero-container">
@@ -516,6 +547,92 @@
     </div>
   </section>
 
+  <!-- CARRUSEL VISUAL DE EXPEDICIONES & MOMENTOS REALES -->
+  <section class="section gallery-carousel-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FOTOGRAFÍA & MOMENTOS</span>
+        <h2 class="section-title">La Selva Se Vive con los Ojos Bien Abiertos</h2>
+        <p class="section-subtitle">
+          Capturas reales de nuestras salidas diarias. Desliza para explorar la belleza viva de Ucayali y nuestros destinos favoritos.
+        </p>
+
+        <div class="gallery-nav-controls">
+          <button type="button" class="btn-gallery-nav prev" id="galPrevBtn" aria-label="Foto anterior">‹</button>
+          <span class="gallery-counter" id="galCounter">1 / 5</span>
+          <button type="button" class="btn-gallery-nav next" id="galNextBtn" aria-label="Siguiente foto">›</button>
+        </div>
+      </div>
+
+      <!-- TRACK DESLIZANTE DE FOTOS CON EFECTO PROFUNDO -->
+      <div class="gallery-track-container">
+        <div class="gallery-track" id="galleryTrack">
+
+          <div class="gallery-card">
+            <div class="gallery-image-box">
+              <img src="assets/images/yarinacocha.jpg" alt="Atardecer y canoas tradicionales en Laguna Yarinacocha Pucallpa" loading="lazy">
+              <span class="gallery-badge">Ucayali Viva</span>
+            </div>
+            <div class="gallery-card-content">
+              <h4>Atardecer Dorado en Yarinacocha</h4>
+              <p>Navegación en peque-peque al ponerse el sol, cuando las aguas se tiñen de fuego y los bufeos colorados asoman junto a la barca.</p>
+              <span class="gallery-chip">📍 Puerto Callao, Pucallpa</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <div class="gallery-image-box">
+              <img src="assets/images/velo_novia.jpg" alt="Catarata Velo de la Novia en Aguaytia Ucayali" loading="lazy">
+              <span class="gallery-badge adventure">Aventura</span>
+            </div>
+            <div class="gallery-card-content">
+              <h4>Pozas del Velo de la Novia</h4>
+              <p>La caída de agua más icónica de la Cordillera Azul. Pozas cristalinas rodeadas de helechos gigantes y brisa refrescante.</p>
+              <span class="gallery-chip">📍 Boquerón de Padre Abad</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <div class="gallery-image-box">
+              <img src="assets/images/shipibo_kene.jpg" alt="Bordado Kené ancestral en la comunidad nativa San Francisco" loading="lazy">
+              <span class="gallery-badge culture">Cultura</span>
+            </div>
+            <div class="gallery-card-content">
+              <h4>El Arte Sagrado del Kené</h4>
+              <p>Maestras artesanas shipibas tejiendo visiones espirituales de los ríos y las constelaciones amazónicas en telas hechas a mano.</p>
+              <span class="gallery-chip">📍 Comunidad San Francisco</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <div class="gallery-image-box">
+              <img src="assets/images/cusco_machu_picchu.jpg" alt="Amanecer con neblina en Machu Picchu" loading="lazy">
+              <span class="gallery-badge premium">Nacional</span>
+            </div>
+            <div class="gallery-card-content">
+              <h4>Misterio Inca en Machu Picchu</h4>
+              <p>Paquetes integrales desde Pucallpa o Lima con tren panorámico y hoteles exclusivos en el corazón del Valle Sagrado.</p>
+              <span class="gallery-chip">📍 Cusco, Perú</span>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <div class="gallery-image-box">
+              <img src="assets/images/caribe_cancun.jpg" alt="Playa paradisiaca con palmeras en Cancun Riviera Maya" loading="lazy">
+              <span class="gallery-badge international">Caribe</span>
+            </div>
+            <div class="gallery-card-content">
+              <h4>Paraíso Turquesa en Cancún</h4>
+              <p>Descanso total en resorts 5 estrellas all-inclusive para toda la familia con vuelos y traslados gestionados sin colas.</p>
+              <span class="gallery-chip">📍 Riviera Maya, México</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SECCIÓN "EL ALMA DE LA SELVA": SENTIMIENTO, CULTURA Y CONFIANZA -->
   <section class="section reasons-section" id="alma-selva">
     <div class="container">
@@ -701,60 +818,149 @@
     </div>
   </section>
 
-  <!-- TESTIMONIOS REALES -->
-  <section class="section testimonials-section" id="testimonios">
+  <!-- SECCIÓN EXPERIENCIAS & OPINIONES REALES EN GOOGLE MAPS -->
+  <section class="section google-reviews-section" id="testimonios">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">TESTIMONIOS</span>
-        <h2 class="section-title">Lo Que Dicen Nuestros Viajeros</h2>
+        <span class="section-tag">OPINIONES VERIFICADAS</span>
+        <h2 class="section-title">Lo Que Dicen Nuestros Viajeros en Google Maps</h2>
         <p class="section-subtitle">
-          Experiencias genuinas de personas y familias que confiaron en Laser Viajes.
+          Más de 148 viajeros han calificado su experiencia con Laser Viajes y Turismo en Pucallpa. Transparencia, puntualidad y calidez amazónica.
         </p>
+
+        <!-- BADGE RESUMEN DE GOOGLE MAPS -->
+        <div class="google-rating-summary">
+          <div class="google-logo-box">
+            <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            <span class="google-brand">Google</span>
+          </div>
+          <div class="google-stars-score">
+            <span class="score-number">4.9</span>
+            <div class="stars-gold">★★★★★</div>
+          </div>
+          <div class="google-count">
+            <strong>148 opiniones verificadas</strong>
+            <span>Operador turístico en Pucallpa</span>
+          </div>
+          <a href="https://www.google.com/maps/search/Laser+Viajes+Pucallpa" target="_blank" rel="noopener" class="btn btn-outline btn-sm btn-google-link">
+            <span>Ver perfil en Maps</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
       </div>
 
-      <div class="testimonials-grid">
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-comment">
-            "Excelente atención para el tour a Yarinacocha. Fuimos con mis hijos, la comida en la laguna estuvo exquisita y pudimos ver delfines rosados. Muy profesionales."
-          </p>
-          <div class="testi-author">
-            <div class="author-avatar">MS</div>
-            <div class="author-info">
-              <span class="author-name">Maricielo Silva</span>
-              <span class="author-origin">Viajera desde Lima</span>
+      <!-- CARRUSEL DE RESEÑAS DE GOOGLE MAPS -->
+      <div class="reviews-slider-wrapper">
+        <button type="button" class="review-nav-btn prev" id="reviewPrevBtn" aria-label="Reseña anterior">‹</button>
+        
+        <div class="reviews-track" id="reviewsTrack">
+
+          <!-- RESEÑA 1: LOCAL GUIDE -->
+          <article class="google-review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar av-1">RM</div>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Roberto Mendoza</span>
+                <span class="reviewer-guide">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="#ea4335"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  Local Guide • 38 reseñas
+                </span>
+              </div>
+              <span class="google-icon-corner">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              </span>
             </div>
-          </div>
+            <div class="review-stars-date">
+              <span class="stars-gold">★★★★★</span>
+              <span class="review-date">Hace 2 semanas</span>
+            </div>
+            <p class="review-text">
+              "Excelente atención en su oficina de Jr. Tarapacá frente al BCP. Contratamos el tour a la Laguna de Yarinacocha con visita a la comunidad de San Francisco. El botero muy prudente, chalecos limpios y vimos delfines colorados. ¡Recomendadísimos en Pucallpa!"
+            </p>
+            <div class="review-perks-badge">
+              <span>Tour: Yarinacocha & Delfines</span>
+              <span>✔ Viaje en Familia</span>
+            </div>
+          </article>
+
+          <!-- RESEÑA 2: VIAJERA DE LIMA -->
+          <article class="google-review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar av-2">AF</div>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Andrea Falconí</span>
+                <span class="reviewer-guide">Lima, Perú • 14 opiniones</span>
+              </div>
+              <span class="google-icon-corner">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              </span>
+            </div>
+            <div class="review-stars-date">
+              <span class="stars-gold">★★★★★</span>
+              <span class="review-date">Hace 1 mes</span>
+            </div>
+            <p class="review-text">
+              "Compramos el full day a la catarata Velo de la Novia y el Boquerón del Padre Abad. El vehículo con aire acondicionado impecable y el almuerzo en Aguaytía riquísimo. La atención por WhatsApp fue rápida y clara en todo momento."
+            </p>
+            <div class="review-perks-badge">
+              <span>Tour: Aguaytía & Cataratas</span>
+              <span>✔ Amigos</span>
+            </div>
+          </article>
+
+          <!-- RESEÑA 3: TURISMO EXTRANJERO -->
+          <article class="google-review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar av-3">JD</div>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Jean-David Meyer</span>
+                <span class="reviewer-guide">Francia • Reseña verificada</span>
+              </div>
+              <span class="google-icon-corner">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              </span>
+            </div>
+            <div class="review-stars-date">
+              <span class="stars-gold">★★★★★</span>
+              <span class="review-date">Hace 3 semanas</span>
+            </div>
+            <p class="review-text">
+              "Great experience with Laser Viajes! Professional team, English assistance and authentic connection with Shipibo artisans. They also arranged our flight tickets back to Lima seamlessly. Merci beaucoup!"
+            </p>
+            <div class="review-perks-badge">
+              <span>Tour: Shipibo & Vuelos</span>
+              <span>✔ Viajero Internacional</span>
+            </div>
+          </article>
+
+          <!-- RESEÑA 4: CLIENTE CORPORATIVO / BOLETOS -->
+          <article class="google-review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar av-4">MQ</div>
+              <div class="reviewer-meta">
+                <span class="reviewer-name">Milagros Quispe</span>
+                <span class="reviewer-guide">Trujillo • 22 opiniones</span>
+              </div>
+              <span class="google-icon-corner">
+                <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              </span>
+            </div>
+            <div class="review-stars-date">
+              <span class="stars-gold">★★★★★</span>
+              <span class="review-date">Hace 1 mes</span>
+            </div>
+            <p class="review-text">
+              "Tuvimos un problema con la aerolínea por mal tiempo en Pucallpa y la señorita de Laser Viajes nos reprogramó los pasajes de inmediato sin cobrarnos de más. Se nota la diferencia de comprar en una agencia seria y con local propio."
+            </p>
+            <div class="review-perks-badge">
+              <span>Servicio: Boletos Aéreos</span>
+              <span>✔ Asistencia 24/7</span>
+            </div>
+          </article>
+
         </div>
 
-        <div class="testi-card featured">
-          <span class="testi-badge">Recomendado</span>
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-comment">
-            "Compramos el tour a la catarata Velo de la Novia en su local de Jr. Tarapacá. Movilidad muy cómoda, chofer responsable y el guía nos explicó toda la historia de Padre Abad."
-          </p>
-          <div class="testi-author">
-            <div class="author-avatar">CR</div>
-            <div class="author-info">
-              <span class="author-name">Carlos Rodriguez</span>
-              <span class="author-origin">Pucallpa, Ucayali</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testi-card">
-          <div class="testi-stars">★★★★★</div>
-          <p class="testi-comment">
-            "Nos organizaron un viaje a Cusco desde Pucallpa con boletos, tren y hoteles. Todo salió puntual y sin ningún contratiempo. 100% confiables."
-          </p>
-          <div class="testi-author">
-            <div class="author-avatar">DG</div>
-            <div class="author-info">
-              <span class="author-name">Diana Gonzales</span>
-              <span class="author-origin">Turismo Familiar</span>
-            </div>
-          </div>
-        </div>
+        <button type="button" class="review-nav-btn next" id="reviewNextBtn" aria-label="Siguiente reseña">›</button>
       </div>
     </div>
   </section>

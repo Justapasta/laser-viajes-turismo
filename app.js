@@ -471,5 +471,143 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- 12. HERO SLIDER CAROUSEL (5 DESTINOS CON AUTOPLAY) ---
+  const heroSlides = document.querySelectorAll('.hero-slide');
+  const heroDots = document.querySelectorAll('.hero-dot');
+  const heroLocationSpan = document.getElementById('heroSlideLocation');
+  const heroPrevBtn = document.getElementById('heroPrevBtn');
+  const heroNextBtn = document.getElementById('heroNextBtn');
+  let currentSlideIndex = 0;
+  let heroTimer = null;
+
+  function showHeroSlide(index) {
+    if (heroSlides.length === 0) return;
+    if (index < 0) index = heroSlides.length - 1;
+    if (index >= heroSlides.length) index = 0;
+
+    currentSlideIndex = index;
+
+    heroSlides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === currentSlideIndex);
+    });
+
+    heroDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentSlideIndex);
+    });
+
+    const activeSlide = heroSlides[currentSlideIndex];
+    if (activeSlide && heroLocationSpan) {
+      heroLocationSpan.textContent = '📍 ' + (activeSlide.dataset.location || 'Pucallpa, Ucayali');
+    }
+  }
+
+  function startHeroTimer() {
+    stopHeroTimer();
+    heroTimer = setInterval(() => {
+      showHeroSlide(currentSlideIndex + 1);
+    }, 5500);
+  }
+
+  function stopHeroTimer() {
+    if (heroTimer) clearInterval(heroTimer);
+  }
+
+  if (heroPrevBtn) {
+    heroPrevBtn.addEventListener('click', () => {
+      showHeroSlide(currentSlideIndex - 1);
+      startHeroTimer();
+    });
+  }
+
+  if (heroNextBtn) {
+    heroNextBtn.addEventListener('click', () => {
+      showHeroSlide(currentSlideIndex + 1);
+      startHeroTimer();
+    });
+  }
+
+  heroDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.dataset.index, 10);
+      showHeroSlide(idx);
+      startHeroTimer();
+    });
+  });
+
+  const heroSliderElem = document.getElementById('heroSlider');
+  if (heroSliderElem) {
+    heroSliderElem.addEventListener('mouseenter', stopHeroTimer);
+    heroSliderElem.addEventListener('mouseleave', startHeroTimer);
+
+    // Swipe táctil en móvil para Hero
+    let touchStartX = 0;
+    heroSliderElem.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    heroSliderElem.addEventListener('touchend', (e) => {
+      const touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) {
+        showHeroSlide(currentSlideIndex + 1); // Deslizar izquierda
+        startHeroTimer();
+      } else if (touchEndX - touchStartX > 50) {
+        showHeroSlide(currentSlideIndex - 1); // Deslizar derecha
+        startHeroTimer();
+      }
+    }, { passive: true });
+  }
+
+  startHeroTimer();
+
+  // --- 13. GALLERY CAROUSEL TRACK ---
+  const galleryTrack = document.getElementById('galleryTrack');
+  const galPrevBtn = document.getElementById('galPrevBtn');
+  const galNextBtn = document.getElementById('galNextBtn');
+  const galCounter = document.getElementById('galCounter');
+  const galleryCards = document.querySelectorAll('.gallery-card');
+
+  function updateGalleryCounter() {
+    if (!galleryTrack || galleryCards.length === 0 || !galCounter) return;
+    const cardWidth = 340;
+    const current = Math.min(Math.round(galleryTrack.scrollLeft / cardWidth) + 1, galleryCards.length);
+    galCounter.textContent = `${Math.max(1, current)} / ${galleryCards.length}`;
+  }
+
+  if (galPrevBtn && galleryTrack) {
+    galPrevBtn.addEventListener('click', () => {
+      galleryTrack.scrollBy({ left: -340, behavior: 'smooth' });
+      setTimeout(updateGalleryCounter, 300);
+    });
+  }
+
+  if (galNextBtn && galleryTrack) {
+    galNextBtn.addEventListener('click', () => {
+      galleryTrack.scrollBy({ left: 340, behavior: 'smooth' });
+      setTimeout(updateGalleryCounter, 300);
+    });
+  }
+
+  if (galleryTrack) {
+    galleryTrack.addEventListener('scroll', updateGalleryCounter, { passive: true });
+  }
+
+  // --- 14. GOOGLE REVIEWS SLIDER ---
+  const reviewsTrack = document.getElementById('reviewsTrack');
+  const reviewPrevBtn = document.getElementById('reviewPrevBtn');
+  const reviewNextBtn = document.getElementById('reviewNextBtn');
+
+  if (reviewPrevBtn && reviewsTrack) {
+    reviewPrevBtn.addEventListener('click', () => {
+      reviewsTrack.scrollBy({ left: -340, behavior: 'smooth' });
+    });
+  }
+
+  if (reviewNextBtn && reviewsTrack) {
+    reviewNextBtn.addEventListener('click', () => {
+      reviewsTrack.scrollBy({ left: 340, behavior: 'smooth' });
+    });
+  }
+
 });
+
 
