@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laser Viajes y Turismo | Pucallpa, Ucayali & Destinos del Mundo</title>
+  <meta name="description" content="Agencia de viajes y operador turístico oficial en Pucallpa, Ucayali. Tours en Yarinacocha, Boquerón del Padre Abad, comunidades nativas, pasajes aéreos y paquetes nacionales e internacionales.">
+  <meta name="keywords" content="Laser Viajes, Pucallpa turismo, tours Yarinacocha, Ucayali selva, pasajes aéreos Pucallpa, agencia de viajes Pucallpa, Jr Tarapaca 859">
+  <meta property="og:title" content="Laser Viajes y Turismo - Vive la Amazonía Peruana">
+  <meta property="og:description" content="Operador turístico formal en Pucallpa. Reserva tus tours amazónicos, vuelos y paquetes turísticos con atención personalizada.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Outfit (Moderno, limpio, prémium de alta gama) + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- TOP BAR: INFORMACIÓN REAL Y ESTADO EN VIVO -->
+  <div class="topbar">
+    <div class="container topbar-content">
+      <div class="topbar-left">
+        <span class="badge-live"><span class="pulse-dot"></span> Pucallpa, Ucayali: 31°C • Sol Amazónico</span>
+        <span class="divider-dot">•</span>
+        <span class="topbar-address">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Jr. Tarapacá N° 859, Pucallpa (Frente al BCP)
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          961 900 512 / 961 900 788
+        </span>
+        <span class="divider-dot">•</span>
+        <!-- Currency Switcher -->
+        <div class="currency-toggle" id="currencyToggle">
+          <span class="curr-label">Moneda:</span>
+          <button type="button" class="btn-curr active" data-currency="PEN">PEN (S/)</button>
+          <button type="button" class="btn-curr" data-currency="USD">USD ($)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-mark">
+          <span class="logo-compass">✦</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">LASER</span>
+          <span class="logo-sub">VIAJES & TURISMO</span>
+        </div>
+      </a>
+
+      <!-- Shipibo subtle decorative pattern divider -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#destinos" class="nav-link">Destinos & Tours</a>
+        <a href="#experiencias" class="nav-link">Por qué Laser</a>
+        <a href="#vuelos" class="nav-link">Vuelos & Pasajes</a>
+        <a href="#cotizador" class="nav-link">Cotizador Online</a>
+        <a href="#testimonios" class="nav-link">Viajeros</a>
+        <a href="#contacto" class="nav-link">Ubicación</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos." target="_blank" rel="noopener" class="btn btn-whatsapp-header">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.02 16.71c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.04 8.04 0 01-1.23-4.25c0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37a8.02 8.02 0 012.36 5.72c0 4.46-3.63 8.09-8.09 8.09zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+          <span>Chat WhatsApp</span>
+        </a>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: IMPACTO VISUAL AUTÉNTICO -->
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="assets/images/yarinacocha.jpg" alt="Lago Yarinacocha en Pucallpa Ucayali al atardecer" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-icon">✦</span>
+          <span>Operador Turístico Autorizado en Pucallpa • DIRCETUR</span>
+        </div>
+
+        <h1 class="hero-title">
+          La Amazonía auténtica se siente con quien <span class="highlight-text">conoce la selva</span>.
+        </h1>
+
+        <p class="hero-description">
+          Desde expediciones mágicas en <strong>Yarinacocha</strong> y el rugir de las cataratas de <strong>Aguaytía</strong>, hasta vuelos directos y viajes soñados por todo el Perú y el mundo. Más de 14 años creando memorias inolvidables desde Pucallpa.
+        </p>
+
+        <!-- BUSCADOR RÁPIDO INTERACTIVO -->
+        <div class="hero-search-box">
+          <div class="search-field">
+            <label for="heroDestino">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              ¿A dónde viajas?
+            </label>
+            <select id="heroDestino">
+              <option value="yarinacocha">Yarinacocha & Selva Shipibo</option>
+              <option value="aguaytia">Cataratas de Aguaytía & Padre Abad</option>
+              <option value="cusco">Cusco & Machu Picchu Mágico</option>
+              <option value="caribe">Cancún & Punta Cana Todo Incluido</option>
+              <option value="vuelos">Boletos Aéreos (Lima / Provincias)</option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="heroTipo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Estilo de viaje
+            </label>
+            <select id="heroTipo">
+              <option value="todos">Cualquier tipo</option>
+              <option value="aventura">Naturaleza & Aventura</option>
+              <option value="cultural">Cultura & Mística Ancestral</option>
+              <option value="familiar">Familiar & Relax</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-search-hero" id="btnBuscarHero">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <span>Explorar Tours</span>
+          </button>
+        </div>
+
+        <!-- STATS / CREDENCIALES -->
+        <div class="hero-trust-row">
+          <div class="trust-item">
+            <span class="trust-number">+14</span>
+            <span class="trust-label">Años en Pucallpa</span>
+          </div>
+          <div class="trust-separator"></div>
+          <div class="trust-item">
+            <span class="trust-number">+12,500</span>
+            <span class="trust-label">Pasajeros felices</span>
+          </div>
+          <div class="trust-separator"></div>
+          <div class="trust-item">
+            <span class="trust-number">100%</span>
+            <span class="trust-label">Formalidad & RUC</span>
+          </div>
+          <div class="trust-separator"></div>
+          <div class="trust-item">
+            <span class="trust-number">4.9 ★</span>
+            <span class="trust-label">Valoración clientes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative Wave Bottom Divider -->
+    <div class="hero-bottom-curve">
+      <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+        <path d="M0,40 C320,100 680,0 1080,50 C1240,75 1380,30 1440,20 L1440,100 L0,100 Z" fill="var(--bg-main)"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CULTURAL: PATRÓN KENÉ Y SELLO DE CALIDAD -->
+  <section class="kene-strip">
+    <div class="container kene-container">
+      <div class="kene-badge">
+        <span class="kene-icon">❊</span>
+        <span>Orgullo Ucayalino</span>
+      </div>
+      <p class="kene-text">
+        Operador local directo sin intermediarios: botes propios, guías nativos autorizados, chalecos salvavidas certificados y respeto profundo por nuestras comunidades originarias.
+      </p>
+      <div class="kene-action">
+        <a href="#experiencias" class="kene-link">Conoce nuestros protocolos &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE TOURS Y EXPERIENCIAS -->
+  <section class="section tours-section" id="destinos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CATÁLOGO EXCLUSIVO</span>
+        <h2 class="section-title">Experiencias Diseñadas para Emocionar</h2>
+        <p class="section-subtitle">
+          Elige tu próxima gran historia. Tarifas transparentes, salidas diarias confirmadas y asistencia 24/7 de nuestro equipo en Jr. Tarapacá.
+        </p>
+
+        <!-- Filtros interactivos -->
+        <div class="tour-tabs" id="tourTabs">
+          <button type="button" class="tab-btn active" data-category="todos">Todos los Destinos</button>
+          <button type="button" class="tab-btn" data-category="pucallpa">Pucallpa & Selva Viva</button>
+          <button type="button" class="tab-btn" data-category="nacional">Cusco & Perú</button>
+          <button type="button" class="tab-btn" data-category="internacional">Caribe & Mundo</button>
+          <button type="button" class="tab-btn" data-category="vuelos">Vuelos y Boletos</button>
+        </div>
+      </div>
+
+      <!-- GRID DE TARJETAS DE TOURS -->
+      <div class="tours-grid" id="toursGrid">
+
+        <!-- TOUR 1: YARINACOCHA MÍSTICA -->
+        <article class="tour-card" data-category="pucallpa" data-price-pen="85" data-price-usd="24">
+          <div class="tour-media">
+            <img src="assets/images/yarinacocha.jpg" alt="Tour Laguna de Yarinacocha y Delfines" loading="lazy">
+            <span class="tour-badge highlight">Más Solicitado</span>
+            <div class="tour-duration">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Full Day (7 Horas)
+            </div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Yarinacocha, Pucallpa
+            </div>
+            <h3 class="tour-name">Expedición Yarinacocha, Delfines de Río & San Francisco</h3>
+            <p class="tour-desc">
+              Navegación tradicional en peque-peque, búsqueda de bufeos colorados (delfines grises y rosados), y visita vivencial con la comunidad nativa Shipibo-Konibo.
+            </p>
+            <div class="tour-highlights">
+              <span class="tag">Bote tradicional</span>
+              <span class="tag">Artesanía Kené</span>
+              <span class="tag">Almuerzo típico</span>
+            </div>
+          </div>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="price-from">Desde</span>
+              <div class="price-amount"><span class="price-symbol">S/</span> <span class="price-val">85</span> <small>/pers.</small></div>
+            </div>
+            <div class="tour-actions">
+              <button class="btn btn-outline btn-itinerary" data-tour="yarinacocha">Ver Itinerario</button>
+              <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20reservar%20el%20Tour%20Expedici%C3%B3n%20Yarinacocha." target="_blank" rel="noopener" class="btn btn-book">
+                Reservar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 2: AGUAYTÍA Y VELO DE LA NOVIA -->
+        <article class="tour-card" data-category="pucallpa" data-price-pen="135" data-price-usd="38">
+          <div class="tour-media">
+            <img src="assets/images/velo_novia.jpg" alt="Catarata Velo de la Novia Aguaytia" loading="lazy">
+            <span class="tour-badge adventure">Aventura & Selva</span>
+            <div class="tour-duration">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Full Day Aventura
+            </div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cordillera Azul, Aguaytía
+            </div>
+            <h3 class="tour-name">Aventura Cañón de Padre Abad & Catarata Velo de la Novia</h3>
+            <p class="tour-desc">
+              Ruta escénica por la Cordillera Azul, el impresionante Boquerón del Padre Abad, la mística Ducha del Diablo y baño refrescante en la poza natural del Velo de la Novia.
+            </p>
+            <div class="tour-highlights">
+              <span class="tag">Transporte climatizado</span>
+              <span class="tag">Cataratas gemelas</span>
+              <span class="tag">Guía oficial</span>
+            </div>
+          </div>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="price-from">Desde</span>
+              <div class="price-amount"><span class="price-symbol">S/</span> <span class="price-val">135</span> <small>/pers.</small></div>
+            </div>
+            <div class="tour-actions">
+              <button class="btn btn-outline btn-itinerary" data-tour="aguaytia">Ver Itinerario</button>
+              <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20reservar%20el%20Tour%20Cataratas%20Aguayt%C3%ADa." target="_blank" rel="noopener" class="btn btn-book">
+                Reservar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 3: COMUNIDAD SHIPIBO Y MÍSTICA BOTÁNICA -->
+        <article class="tour-card" data-category="pucallpa" data-price-pen="95" data-price-usd="27">
+          <div class="tour-media">
+            <img src="assets/images/shipibo_kene.jpg" alt="Comunidad Shipibo y Medicina Ancestral" loading="lazy">
+            <span class="tour-badge culture">Cultura Viva</span>
+            <div class="tour-duration">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Medio Día (5 Horas)
+            </div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Comunidad San Francisco, Ucayali
+            </div>
+            <h3 class="tour-name">Ruta Cultural Shipibo-Konibo & Botánica Amazónica</h3>
+            <p class="tour-desc">
+              Conexión profunda con maestras artesanas, taller participativo de bordado geométrico Kené y recorrido guiado de plantas medicinales autóctonas (Ayahuasca, Uña de Gato).
+            </p>
+            <div class="tour-highlights">
+              <span class="tag">Taller Kené interactivo</span>
+              <span class="tag">Músicos tradicionales</span>
+              <span class="tag">Jardín botánico</span>
+            </div>
+          </div>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="price-from">Desde</span>
+              <div class="price-amount"><span class="price-symbol">S/</span> <span class="price-val">95</span> <small>/pers.</small></div>
+            </div>
+            <div class="tour-actions">
+              <button class="btn btn-outline btn-itinerary" data-tour="shipibo">Ver Itinerario</button>
+              <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20reservar%20el%20Tour%20Cultural%20Shipibo-Konibo." target="_blank" rel="noopener" class="btn btn-book">
+                Reservar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 4: CUSCO & MACHU PICCHU MÁGICO -->
+        <article class="tour-card" data-category="nacional" data-price-pen="1190" data-price-usd="330">
+          <div class="tour-media">
+            <img src="assets/images/cusco_machu_picchu.jpg" alt="Tour Cusco y Machu Picchu" loading="lazy">
+            <span class="tour-badge premium">Todo Incluido</span>
+            <div class="tour-duration">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              4 Días / 3 Noches
+            </div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cusco & Valle Sagrado
+            </div>
+            <h3 class="tour-name">Cusco Imperial, Valle Sagrado & Ciudadela de Machu Picchu</h3>
+            <p class="tour-desc">
+              Paquete integral saliendo desde Pucallpa o Lima: boletos de tren turístico Inca Rail/Perurail, hoteles con desayuno, entradas a Machu Picchu y traslados privados.
+            </p>
+            <div class="tour-highlights">
+              <span class="tag">Tren Turístico</span>
+              <span class="tag">Entrada garantizada</span>
+              <span class="tag">Hotel 3★ Superior</span>
+            </div>
+          </div>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="price-from">Desde</span>
+              <div class="price-amount"><span class="price-symbol">S/</span> <span class="price-val">1190</span> <small>/pers.</small></div>
+            </div>
+            <div class="tour-actions">
+              <button class="btn btn-outline btn-itinerary" data-tour="cusco">Ver Itinerario</button>
+              <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20cotizar%20el%20paquete%20Cusco%20y%20Machu%20Picchu." target="_blank" rel="noopener" class="btn btn-book">
+                Cotizar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOUR 5: CARIBE CANCÚN / PUNTA CANA -->
+        <article class="tour-card" data-category="internacional" data-price-pen="2850" data-price-usd="790">
+          <div class="tour-media">
+            <img src="assets/images/caribe_cancun.jpg" alt="Paquete Internacional Cancun Todo Incluido" loading="lazy">
+            <span class="tour-badge international">Resort 5 Estrellas</span>
+            <div class="tour-duration">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              5 Días / 4 Noches
+            </div>
+          </div>
+          <div class="tour-body">
+            <div class="tour-location">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Cancún & Riviera Maya, México
+            </div>
+            <h3 class="tour-name">Escape Caribeño: Cancún & Riviera Maya All Inclusive</h3>
+            <p class="tour-desc">
+              Vuelos internacionales, traslados aeropuerto-hotel, barra libre de comidas y bebidas ilimitadas frente a playas turquesas de ensueño. Ideal para familias o luna de miel.
+            </p>
+            <div class="tour-highlights">
+              <span class="tag">Todo incluido 24h</span>
+              <span class="tag">Bebidas premium</span>
+              <span class="tag">Asistencia al viajero</span>
+            </div>
+          </div>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="price-from">Desde</span>
+              <div class="price-amount"><span class="price-symbol">S/</span> <span class="price-val">2850</span> <small>/pers.</small></div>
+            </div>
+            <div class="tour-actions">
+              <button class="btn btn-outline btn-itinerary" data-tour="cancun">Ver Itinerario</button>
+              <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20cotizar%20el%20paquete%20Canc%C3%BAn%20Todo%20Incluido." target="_blank" rel="noopener" class="btn btn-book">
+                Cotizar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6: EMISIÓN DE BOLETOS AÉREOS -->
+        <article class="tour-card flight-card" data-category="vuelos" data-price-pen="180" data-price-usd="50">
+          <div class="flight-card-inner">
+            <div class="flight-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Servicio de Boletería Oficial
+            </div>
+            <h3 class="flight-title">Vuelos Nacionales e Internacionales al Instante</h3>
+            <p class="flight-desc">
+              Emisión directa de pasajes en <strong>LATAM, Star Perú, Sky Airline y aerolíneas internacionales</strong>. Olvídate de problemas con tarjetas o cambios de horario: te respaldamos antes, durante y después del vuelo.
+            </p>
+
+            <div class="flight-routes">
+              <div class="flight-route-item">
+                <span class="route-cities">Pucallpa (PCL) ⇄ Lima (LIM)</span>
+                <span class="route-tag">Vuelos Diarios</span>
+              </div>
+              <div class="flight-route-item">
+                <span class="route-cities">Pucallpa (PCL) ⇄ Iquitos (IQT)</span>
+                <span class="route-tag">Conexión Rápida</span>
+              </div>
+              <div class="flight-route-item">
+                <span class="route-cities">Lima ⇄ Santiago / Bogotá / Miami</span>
+                <span class="route-tag">Mejor Tarifa</span>
+              </div>
+            </div>
+
+            <div class="flight-perks">
+              <span>✔ Selección de asiento</span>
+              <span>✔ Equipaje garantizado</span>
+              <span>✔ Check-in asistido</span>
+            </div>
+
+            <div class="flight-footer">
+              <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20cotizar%20un%20boleto%20a%C3%A9reo%20desde%20Pucallpa." target="_blank" rel="noopener" class="btn btn-flight-cta">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.02 16.71c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.04 8.04 0 01-1.23-4.25c0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37a8.02 8.02 0 012.36 5.72c0 4.46-3.63 8.09-8.09 8.09zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+                <span>Cotizar Vuelo por WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CREATIVA: POR QUÉ LASER VIAJES (DIFERENCIADOR REAL) -->
+  <section class="section reasons-section" id="experiencias">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SEGURIDAD Y CONFIANZA</span>
+        <h2 class="section-title">¿Por Qué Viajar con Laser Viajes?</h2>
+        <p class="section-subtitle">
+          En la selva y en viajes de larga distancia, la formalidad no es un lujo: es tu tranquilidad y la de tu familia.
+        </p>
+      </div>
+
+      <div class="reasons-grid">
+        <div class="reason-card">
+          <div class="reason-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="reason-title">Oficina Física en Pucallpa</h3>
+          <p class="reason-text">
+            No somos un perfil anónimo de redes sociales. Atendemos de lunes a sábado en <strong>Jr. Tarapacá 859</strong>. Puedes visitarnos, tomar un café y planear cada detalle en persona.
+          </p>
+        </div>
+
+        <div class="reason-card">
+          <div class="reason-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+          </div>
+          <h3 class="reason-title">Seguridad Fluvial Certificada</h3>
+          <p class="reason-text">
+            Navegamos en la Laguna de Yarinacocha y ríos afluentes con embarcaciones inspeccionadas, chalecos salvavidas reglamentarios y motoristas con experiencia en el río Ucayali.
+          </p>
+        </div>
+
+        <div class="reason-card">
+          <div class="reason-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="reason-title">Turismo Comunitario Honesto</h3>
+          <p class="reason-text">
+            Trabajamos de la mano con las comunidades nativas Shipibo-Konibo de San Francisco y 11 de Agosto, garantizando pago justo a sus artesanas y preservación de sus tradiciones.
+          </p>
+        </div>
+
+        <div class="reason-card">
+          <div class="reason-icon-wrapper">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3 class="reason-title">Soporte Durante Todo el Viaje</h3>
+          <p class="reason-text">
+            Si hay reprogramación de vuelo por clima, demoras o consultas en destino, tienes una línea directa de WhatsApp activa para resolver cualquier contingencia de inmediato.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COTIZADOR INTERACTIVO INTELIGENTE (HERRAMIENTA CLAVE DE VENTA) -->
+  <section class="section quote-section" id="cotizador">
+    <div class="container quote-container">
+      <div class="quote-header">
+        <span class="section-tag light">COTIZADOR RÁPIDO EN VIVO</span>
+        <h2 class="quote-title">Personaliza Tu Viaje en 30 Segundos</h2>
+        <p class="quote-subtitle">
+          Selecciona tus preferencias y calcularemos una propuesta instantánea que se enviará automáticamente a nuestro WhatsApp con todos los detalles listos para reservar.
+        </p>
+      </div>
+
+      <div class="quote-calculator-card">
+        <form id="calculatorForm" class="calc-form">
+          <div class="calc-grid">
+
+            <!-- Destino -->
+            <div class="form-group">
+              <label for="calcDestino" class="form-label">
+                <span>1. Destino principal</span>
+              </label>
+              <select id="calcDestino" class="form-control" required>
+                <option value="Yarinacocha & Delfines (Full Day)" data-base-pen="85">Yarinacocha & Delfines (S/ 85 por pers.)</option>
+                <option value="Aguaytía & Catarata Velo de la Novia" data-base-pen="135">Aguaytía & Velo de la Novia (S/ 135 por pers.)</option>
+                <option value="Ruta Cultural Shipibo-Konibo" data-base-pen="95">Comunidad Shipibo & Kené (S/ 95 por pers.)</option>
+                <option value="Cusco & Machu Picchu 4D/3N" data-base-pen="1190">Cusco & Machu Picchu 4D/3N (S/ 1190 por pers.)</option>
+                <option value="Cancún & Riviera Maya All Inclusive" data-base-pen="2850">Cancún Caribe All Inclusive (S/ 2850 por pers.)</option>
+                <option value="Boletos Aéreos Pucallpa / Lima" data-base-pen="220">Boletos Aéreos (Cotización personalizada)</option>
+              </select>
+            </div>
+
+            <!-- Cantidad de personas -->
+            <div class="form-group">
+              <label for="calcPersonas" class="form-label">
+                <span>2. Número de viajeros</span>
+              </label>
+              <div class="counter-input">
+                <button type="button" class="btn-counter" id="btnMinusPeople">-</button>
+                <input type="number" id="calcPersonas" value="2" min="1" max="25" class="counter-val" readonly>
+                <button type="button" class="btn-counter" id="btnPlusPeople">+</button>
+              </div>
+            </div>
+
+            <!-- Fecha tentativa -->
+            <div class="form-group">
+              <label for="calcFecha" class="form-label">
+                <span>3. Fecha estimada</span>
+              </label>
+              <input type="date" id="calcFecha" class="form-control" required>
+            </div>
+
+            <!-- Tipo de experiencia -->
+            <div class="form-group">
+              <label for="calcEstilo" class="form-label">
+                <span>4. Motivo del viaje</span>
+              </label>
+              <select id="calcEstilo" class="form-control">
+                <option value="Vacaciones Familiares">Vacaciones Familiares</option>
+                <option value="Pareja / Romance">En Pareja / Romántico</option>
+                <option value="Aventura con Amigos">Aventura con Amigos</option>
+                <option value="Viajero Solitario">Viajero Solitario / Mochilero</option>
+                <option value="Corporativo / Empresa">Viaje de Trabajo / Corporativo</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- Resumen de cotización -->
+          <div class="calc-summary">
+            <div class="summary-left">
+              <span class="summary-label">Inversión Estimada:</span>
+              <div class="summary-price">
+                <span class="summary-currency" id="sumCurrency">S/</span>
+                <span class="summary-val" id="sumPriceTotal">170</span>
+                <span class="summary-note">(tarifa grupal para 2 personas)</span>
+              </div>
+              <div class="summary-included">
+                ✓ Guía certificado • Transporte incluido • Asistencia directa
+              </div>
+            </div>
+
+            <div class="summary-right">
+              <button type="button" class="btn btn-whatsapp-quote" id="btnSendQuoteWhatsapp">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.02 16.71c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.04 8.04 0 01-1.23-4.25c0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37a8.02 8.02 0 012.36 5.72c0 4.46-3.63 8.09-8.09 8.09zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+                <span>Enviar Cotización a WhatsApp</span>
+              </button>
+              <small class="whatsapp-hint">Te atenderá un asesor de Laser Viajes en Pucallpa</small>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS REALES Y EXPERIENCIAS DE VIAJEROS -->
+  <section class="section testimonials-section" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">VOCES DE NUESTROS VIAJEROS</span>
+        <h2 class="section-title">Historias que Comienzan en Pucallpa</h2>
+        <p class="section-subtitle">
+          Viajeros que confiaron en Laser Viajes para conocer los secretos de Ucayali y el mundo.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-comment">
+            "Excelente servicio para el tour a Yarinacocha. Fuimos con mis dos hijos y la atención del botero y del guía fue de primera. Vimos delfines rosados y compramos artesanías preciosas en la comunidad de San Francisco. 100% recomendados."
+          </p>
+          <div class="testi-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <span class="author-name">Maricielo Silva</span>
+              <span class="author-origin">Viajera desde Lima</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card featured">
+          <div class="testi-badge">Viaje Familiar</div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-comment">
+            "Compramos los pasajes y el tour a la catarata Velo de la Novia en su oficina de Jr. Tarapacá. El bus muy cómodo con aire acondicionado y el chofer súper prudente en la carretera a Aguaytía. Nos ayudaron con todo el papeleo de vuelos."
+          </p>
+          <div class="testi-author">
+            <div class="author-avatar">CR</div>
+            <div class="author-info">
+              <span class="author-name">Carlos Rodriguez</span>
+              <span class="author-origin">Pucallpa, Ucayali</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-comment">
+            "Coordinamos un viaje grupal para Cusco desde Pucallpa con Laser Viajes. Todo salió a la perfección: trenes, entradas a Machu Picchu y hotel. Cero preocupaciones, todo bien gestionado."
+          </p>
+          <div class="testi-author">
+            <div class="author-avatar">DG</div>
+            <div class="author-info">
+              <span class="author-name">Diana Gonzales</span>
+              <span class="author-origin">Turismo Corporativo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE CONTACTO, MAPA Y UBICACIÓN REAL -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-info">
+          <span class="section-tag light">ATENCIÓN PRESENCIAL & VIRTUAL</span>
+          <h2 class="contact-title">Visítanos en Nuestra Oficina Central</h2>
+          <p class="contact-desc">
+            Estamos ubicados en el corazón comercial de Pucallpa. Ven a conocernos personalmente o contáctanos por WhatsApp para resolver cualquier consulta en minutos.
+          </p>
+
+          <div class="info-list">
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="info-text">
+                <strong>Dirección:</strong>
+                <span>Jr. Tarapacá N° 859, Pucallpa, Ucayali (Frente a la sede del BCP)</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="info-text">
+                <strong>Teléfonos & WhatsApp:</strong>
+                <span>+51 961 900 512 / +51 961 900 788</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="info-text">
+                <strong>Horario de Atención:</strong>
+                <span>Lunes a Sábado: 8:00 AM – 7:30 PM | Domingos: Atención por WhatsApp</span>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </div>
+              <div class="info-text">
+                <strong>Redes Oficiales:</strong>
+                <a href="https://www.facebook.com/laserviajes/?locale=es_LA" target="_blank" rel="noopener" class="link-social">Facebook: Laser Viajes Turismo Pcl</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-interactive">
+          <div class="quick-inquiry-card">
+            <h3>¿Tienes preguntas o deseas una cotización a medida?</h3>
+            <p>Escribe tu nombre y consulta rápida para abrir WhatsApp de forma inmediata:</p>
+            <form id="quickContactForm">
+              <div class="form-group-contact">
+                <input type="text" id="quickName" placeholder="Tu nombre y apellido" required>
+              </div>
+              <div class="form-group-contact">
+                <input type="text" id="quickDestino" placeholder="¿Qué tour o fecha te interesa?" required>
+              </div>
+              <button type="submit" class="btn btn-contact-submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.02 16.71c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.04 8.04 0 01-1.23-4.25c0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37a8.02 8.02 0 012.36 5.72c0 4.46-3.63 8.09-8.09 8.09zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+                <span>Consultar por WhatsApp Ahora</span>
+              </button>
+            </form>
+            <div class="map-badge">
+              <span>📍 Jr. Tarapacá 859, Coronel Portillo, Pucallpa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER EDITORIAL CON INFORMACIÓN LEGAL -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo-mark footer-logo">
+          <span class="logo-compass">✦</span>
+          <span class="logo-name-white">LASER VIAJES Y TURISMO</span>
+        </div>
+        <p class="footer-brand-desc">
+          Operador turístico formal en Pucallpa, Ucayali. Promotores del turismo sostenible, las tradiciones vivas amazónicas y las mejores conexiones aéreas del Perú.
+        </p>
+        <div class="legal-badges">
+          <span class="legal-badge">DIRCETUR Ucayali</span>
+          <span class="legal-badge">MINCETUR Perú</span>
+          <span class="legal-badge">RUC 10427389121</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Tours en Pucallpa</h4>
+        <ul class="footer-links">
+          <li><a href="#destinos">Laguna de Yarinacocha</a></li>
+          <li><a href="#destinos">Comunidad Nativa San Francisco</a></li>
+          <li><a href="#destinos">Boquerón del Padre Abad</a></li>
+          <li><a href="#destinos">Catarata Velo de la Novia</a></li>
+          <li><a href="#destinos">Avistamiento de Delfines</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Destinos & Servicios</h4>
+        <ul class="footer-links">
+          <li><a href="#destinos">Cusco & Machu Picchu</a></li>
+          <li><a href="#destinos">Cancún & Punta Cana</a></li>
+          <li><a href="#vuelos">Boletos Aéreos Pucallpa-Lima</a></li>
+          <li><a href="#cotizador">Cotizador para Grupos</a></li>
+          <li><a href="#contacto">Atención Corporativa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Contacto Directo</h4>
+        <p class="footer-contact-item">📍 Jr. Tarapacá N° 859, Pucallpa</p>
+        <p class="footer-contact-item">📞 961 900 512 / 961 900 788</p>
+        <p class="footer-contact-item">✉ laserviajesturismo@gmail.com</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/laserviajes/?locale=es_LA" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Laser Viajes y Turismo. Todos los derechos reservados. Pucallpa, Ucayali, Perú.</p>
+        <p class="developer-tag">Diseñado para alto impacto y conversión comercial</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE ITINERARIO DETALLADO -->
+  <div class="modal-backdrop" id="itineraryModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Cerrar modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag" id="modalTag">Itinerario Completo</span>
+        <h3 class="modal-title" id="modalTitle">Detalle del Tour</h3>
+        <span class="modal-duration" id="modalDuration">Full Day</span>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Rellenado dinámicamente con JavaScript -->
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-price-wrap">
+          <span class="modal-price-label">Precio por persona:</span>
+          <span class="modal-price-value" id="modalPrice">S/ 85</span>
+        </div>
+        <a href="#" id="modalWhatsappBtn" target="_blank" rel="noopener" class="btn btn-whatsapp-modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.02 16.71c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.04 8.04 0 01-1.23-4.25c0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37a8.02 8.02 0 012.36 5.72c0 4.46-3.63 8.09-8.09 8.09zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+          <span>Reservar por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÓN FLOTANTE CONCIERGE DE WHATSAPP -->
+  <aside class="floating-whatsapp-widget" id="whatsappWidget">
+    <div class="whatsapp-bubble" id="whatsappBubble">
+      <div class="bubble-header">
+        <span class="bubble-status-dot"></span>
+        <span class="bubble-title">Asesor Laser Viajes en línea</span>
+        <button class="bubble-close" id="bubbleCloseBtn">&times;</button>
+      </div>
+      <p class="bubble-body">
+        ¡Hola! ¿Deseas cotizar tours en <strong>Yarinacocha</strong>, <strong>Cataratas</strong> o <strong>vuelos desde Pucallpa</strong>? Escríbenos directamente:
+      </p>
+      <a href="https://wa.me/51961900512?text=Hola%20Laser%20Viajes,%20deseo%20asesor%C3%ADa%20personalizada%20para%20un%20viaje." target="_blank" rel="noopener" class="bubble-btn">
+        Abrir chat en WhatsApp
+      </a>
+    </div>
+
+    <button type="button" class="btn-whatsapp-floating" id="btnWhatsappFloat" aria-label="Abrir WhatsApp">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm.02 16.71c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.04 8.04 0 01-1.23-4.25c0-4.46 3.63-8.09 8.09-8.09 2.16 0 4.19.84 5.72 2.37a8.02 8.02 0 012.36 5.72c0 4.46-3.63 8.09-8.09 8.09zm4.44-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.45-1.35-1.69-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.41-.41-.56-.42h-.48c-.16 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.16 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/></svg>
+      <span class="notification-badge">1</span>
+    </button>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
